@@ -1,9 +1,8 @@
 //
 //  AppDelegate.swift
-//  BMI Calculator
+//  Waitlist Helper
 //
 //  Created by Angela Yu on 21/08/2019.
-//  Copyright © 2019 Angela Yu. All rights reserved.
 //
 
 import UIKit

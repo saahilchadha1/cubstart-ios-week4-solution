@@ -1,9 +1,8 @@
 //
 //  ProbabilityModel.swift
-//  BMI Calculator
+//  Waitlist Helper
 //
-//  Created by Saahil Chadha on 10/5/20.
-//  Copyright © 2020 Angela Yu. All rights reserved.
+//  Created by Saahil Chadha on 9/26/20.
 //
 
 import Foundation
