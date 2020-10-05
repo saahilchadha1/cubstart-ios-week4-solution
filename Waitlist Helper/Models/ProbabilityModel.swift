@@ -18,15 +18,7 @@ struct ProbabilityModel {
      - parameter classSize: Total enrollment size for the course
      */
     mutating func calculateProbability(waitlistPlace: Int, classSize: Int) {
-//      YOUR CODE HERE
-        let tenth = classSize / 10
-        if (waitlistPlace <= tenth) {
-            self.probability = 100
-        } else if (waitlistPlace > tenth * 2){
-            self.probability = 0
-        } else {
-            self.probability = Int(((1.0 - (Float(waitlistPlace - tenth) / Float(tenth))) * 100).rounded())
-        }
+//      YOUR CODE HERE!!!
     }
     
     /**
