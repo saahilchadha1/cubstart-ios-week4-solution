@@ -170,10 +170,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Br4-oG-m9G"/>
-                    <connections>
-                        <outlet property="feedbackLabel" destination="9IV-CT-mxw" id="yBB-ZW-cRq"/>
-                        <outlet property="probabilityLabel" destination="VU9-2W-Sd5" id="rNh-0o-NjH"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fn-rV-g4l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
