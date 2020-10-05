@@ -7,12 +7,18 @@
 
 import Foundation
 
-extension String: Error {}
-
 struct ProbabilityModel {
     var probability: Int?
     
+    
+    /**
+     Calculates the percentage probability that the user is going to get off the waitlist. This probability is an integer between 1-100. See the spec for details on how this probability should be calculated. After calculating, it sets the probability attribute of the ProbabilityModel to this value. This method does not return anything.
+
+     - parameter waitlistPlace: Position on the waitlist
+     - parameter classSize: Total enrollment size for the course
+     */
     mutating func calculateProbability(waitlistPlace: Int, classSize: Int) {
+//      YOUR CODE HERE
         let tenth = classSize / 10
         if (waitlistPlace <= tenth) {
             self.probability = 100
@@ -23,24 +29,33 @@ struct ProbabilityModel {
         }
     }
     
-    func getProbabilityText() throws -> String {
+    /**
+     Returns the percentage probability that the user is going to get off the waitlist as a String.
+     */
+    func getProbabilityText() -> String {
         if let probability = self.probability {
             return "\(probability)%"
         } else {
-            throw "Probability is nil"
+            print("getProbabilityText(): Probability is nil")
+            return "ERROR"
         }
     }
     
-    func getFeedbackText() throws -> String {
+    /**
+     Returns the appropriate feedback text for the given probability by iterating through the feedbackModel array.
+     */
+    func getFeedbackText() -> String {
         if let probability = self.probability {
             for tuple in feedbackModel {
                 if probability >= tuple.0 {
                     return tuple.1
                 }
             }
-            throw "Feedback not found"
+            print("getFeedbackText(): Feedback not found")
+            return "ERROR"
         } else {
-            throw "Probability is nil"
+            print("getFeedbackText(): Probability is nil")
+            return "ERROR"
         }
     }
 }

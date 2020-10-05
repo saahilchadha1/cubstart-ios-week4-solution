@@ -35,14 +35,10 @@ class ViewController: UIViewController {
         if (segue.identifier == "goToResult") {
             let destinationVC = segue.destination as! SecondViewController
             probabilityModel.calculateProbability(waitlistPlace: Int(placeSlider.value), classSize: Int(sizeSlider.value))
-            do {
-                try destinationVC.probability = probabilityModel.getProbabilityText()
-                try destinationVC.feedback = probabilityModel.getFeedbackText()
-            } catch {
-                print("\(error)")
+            destinationVC.probability = probabilityModel.getProbabilityText()
+            destinationVC.feedback = probabilityModel.getFeedbackText()
             }
         }
-    }
     
 
 }
